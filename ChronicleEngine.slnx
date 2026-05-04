@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ChronicleEngine.App/ChronicleEngine.App.csproj" />
+    <Project Path="src/ChronicleEngine.Core/ChronicleEngine.Core.csproj" />
+    <Project Path="src/ChronicleEngine.Narrative/ChronicleEngine.Narrative.csproj" />
+    <Project Path="src/ChronicleEngine.Rules/ChronicleEngine.Rules.csproj" />
+    <Project Path="src/ChronicleEngine.Timeline/ChronicleEngine.Timeline.csproj" />
+  </Folder>
+</Solution>

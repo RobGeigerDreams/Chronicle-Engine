@@ -1,0 +1,12 @@
+{
+  "Tick": 0,
+  "Mood": {
+    "Tension": 0.4,
+    "Absurdity": 0.3,
+    "Decay": 0.2
+  },
+  "Factions": {
+    "goblin_union": 0.5
+  },
+  "EventLog": []
+}

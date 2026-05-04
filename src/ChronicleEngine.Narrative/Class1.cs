@@ -1,4 +1,4 @@
-﻿namespace Chronicle_Engine.Narrative;
+﻿namespace ChronicleEngine.Narrative;
 
 public class Class1
 {

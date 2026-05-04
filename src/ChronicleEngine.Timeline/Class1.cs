@@ -1,4 +1,4 @@
-﻿namespace Chronicle_Engine.Timeline;
+﻿namespace ChronicleEngine.Timeline;
 
 public class Class1
 {

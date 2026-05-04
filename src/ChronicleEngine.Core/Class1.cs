@@ -1,4 +1,4 @@
-﻿namespace Chronicle_Engine.Core;
+﻿namespace ChronicleEngine.Core;
 
 public class Class1
 {

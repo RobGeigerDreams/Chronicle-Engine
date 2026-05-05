@@ -2,42 +2,16 @@
 using ChronicleEngine.Rules;
 using ChronicleEngine.Narrative;
 
-var world = WorldLoader.Load("content/world.json");
+var root = Directory.GetCurrentDirectory();
+var path = Path.Combine(root, "src", "ChronicleEngine.Content", "world.json");
+var world = WorldLoader.Load(path);
 
-var rules = new List<Rule>
+var engine = new SimulationEngine();
+for (int i = 0; i < 10; i++)
 {
-    new Rule
-    {
-        Id = "goblin_unrest",
-        Priority = 0.7f,
-        Conditions =
-        {
-            new Condition { Type = "mood", Key = "tension", GreaterThan = 0.5f }
-        },
-        Actions =
-        {
-            new ActionDef
-            {
-                Type = "log_event",
-                EventText = "Goblin workers quietly refuse assignments."
-            },
-            new ActionDef
-            {
-                Type = "modify_mood",
-                Key = "tension",
-                Delta = 0.05f
-            }
-        }
-    }
-};
-
-var engine = new SimulationEngine(rules);
-
-for (int i = 0; i < 20; i++)
-{
+    Console.WriteLine("\n--------------------");
     engine.Tick(world);
+    var summary = engine.GetTurnSummary(world);
+    Console.WriteLine(summary);
 }
-
-var narrative = NarrativeSystem.Generate(world);
-
-Console.WriteLine(narrative);
+Console.WriteLine("\n=== Simulation Complete ===");
